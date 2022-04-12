@@ -187,6 +187,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.33231959360763264" green="0.86078917980194092" blue="0.78777985038108467" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonAC" destination="DL7-KF-ocx" id="jC6-WT-MXr"/>
+                        <outlet property="buttonZero" destination="lcf-It-rxY" id="mZP-xe-q9B"/>
+                        <outlet property="resultLabel" destination="hK5-Pd-Ysg" id="DeS-dv-DDV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="33" id="fw2-Zc-wtF">
