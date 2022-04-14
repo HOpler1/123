@@ -33,6 +33,58 @@ class ViewController: UIViewController {
             resultLabel.text = numberOne
         }
         else
+        {
+            numberTwo = numberTwo +
+            (sender.titleLabel?.text)!
+            resultLabel.text = numberTwo
+        }
+    }
+    
+    @IBAction func inputOperand(_ sender: UIButton) {
+        operand = sender.titleLabel?.text as!
+        String
+    }
+
+    @IBAction func clearAction(_ sender: UIButton){
+    numberTwo = ""
+    numberOne = ""
+        operand = ""
+        resultLabel.text = "0"
+    }
+    
+    @IBAction func resultAction(_ sender: UIButton) {
+        var result = 0.0
+        
+        switch operand {
+        case "/":
+            result = Double (numberOne)! / Double(numberTwo)!
+        case "+":
+            result = Double (numberOne)! + Double(numberTwo)!
+        case "-":
+            result = Double (numberOne)! - Double(numberTwo)!
+        case "*":
+            result = Double (numberOne)! * Double(numberTwo)!
+        default:
+            break
+        }
+        if result.truncatingRemainder(dividingBy: 1.0) == 0.0 {
+            resultLabel.text = String(Int(result))
+        }
+        else {
+            resultLabel.text = String(result)
+        }
+        
+    }
+    @IBAction func changeResultLabel (_ sender: UIStepper) {
+        let font = resultLabel.font?.fontName
+        let fontSize = CGFloat(sender.value)
+        
+        resultLabel.font = UIFont(name: font!, size: fontSize)
+        
+    }
+    @IBAction func hiddenButtons(_ sender: Any) {
+        buttons.isHidden = !buttons.isHidden
+        buttonChangeResultLabel.isHidden = !buttonChangeResultLabel.isHidden
     }
   
 
